@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/howes/src/Mine/DottedVersionVector/Sources/DottedVersionVector/DVV.swift",
+      "line": 7,
+      "symbol": "DVV.vv",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/howes/src/Mine/DottedVersionVector/Sources/DottedVersionVector/DVV.swift",
+      "line": 8,
+      "symbol": "DVV.dot",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/howes/src/Mine/DottedVersionVector/Sources/DottedVersionVector/Dot.swift",
+      "line": 11,
+      "symbol": "Dot.key",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/howes/src/Mine/DottedVersionVector/Sources/DottedVersionVector/Dot.swift",
+      "line": 12,
+      "symbol": "Dot.counter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/howes/src/Mine/DottedVersionVector"
+}

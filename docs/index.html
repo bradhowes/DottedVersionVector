@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DottedVersionVector  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="DottedVersionVector  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">DottedVersionVector 1.0.0 Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/bradhowes/DottedVersionVector"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">DottedVersionVector Reference</a>
+        <img id="carat" src="img/carat.png" />
+        DottedVersionVector  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/DotVector.html">DotVector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/DVV.html">DVV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Dot.html">Dot</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:19DottedVersionVector03DotC0a">DotVector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><a href="https://github.com/bradhowes/DottedVersionVector/actions"><img src="https://github.com/bradhowes/DottedVersionVector/workflows/Swift/badge.svg" alt="Actions Status"></a>
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat" alt="Swift 5.3"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-orange.svg?style=flat" alt="SPM"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+<h1 id='dottedversionvector-library' class='heading'>DottedVersionVector Library</h1>
+
+<p>This is a Swift implementation of the <em>dotted version vector</em> as described in the paper
+<a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf">Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores</a> by 
+Gonçalves R, Almeida PS, Moreno CB, Fonte V, Preguiça N. (2012). 
+This code used the <a href="https://github.com/ricardobcl/Dotted-Version-Vectors">reference implementation in Erlang</a> for guidance (and test cases).</p>
+
+<p>Additional background information: <a href="https://en.wikipedia.org/wiki/Version_vector">https://en.wikipedia.org/wiki/Version_vector</a></p>
+<h1 id='implementation-details' class='heading'>Implementation Details</h1>
+
+<p>The basic class is <code><a href="Structs/DVV.html">DVV</a></code> which contains a version vector and a <code><a href="Structs/Dot.html">Dot</a></code> which is just a named counter. The version vection itself is
+simply an ordered collection of <code><a href="Structs/Dot.html">Dot</a></code> instances, but with slightly different semantics. The <code><a href="Structs/Dot.html">Dot</a></code> instance in the <code><a href="Structs/DVV.html">DVV</a></code> refers to a 
+write counter for a given server, while the <code><a href="Structs/Dot.html">Dot</a></code> instances in the version history record the relationships between versions.</p>
+
+<p>The Erlang reference implementation incorporates a timestamp in the <code><a href="Structs/Dot.html">Dot</a></code> defintion that is used to order <code><a href="Structs/Dot.html">Dot</a></code> instances when the 
+server or replica key is the same. This Swift implementation does not do this &ndash; it assumes that the server or replica managing the 
+<code><a href="Structs/Dot.html">Dot</a></code> counter can guarantee that it is properly incremented at every update.</p>
+
+<p>Just like the Erlang implementation, a DVV is immutable. The DVV API will generate a new DVV instance instead of changing a value
+in-place.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://linkedin.com/in/bradhowes" target="_blank" rel="external">Brad Howes</a>. All rights reserved. (Last updated: 2020-10-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
