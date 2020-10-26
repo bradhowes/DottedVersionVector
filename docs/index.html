@@ -70,7 +70,7 @@
             
             <p><a href="https://github.com/bradhowes/DottedVersionVector/actions"><img src="https://github.com/bradhowes/DottedVersionVector/workflows/Swift/badge.svg" alt="Actions Status"></a>
 <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat" alt="Swift 5.3"></a>
-<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-orange.svg?style=flat" alt="SPM"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-orange.svg?style=flat" alt="SwiftPM"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 <a href="https://bradhowes.github.io/DottedVersionVector/index.html"><img src="https://img.shields.io/badge/Documentation-green.svg" alt="Documentation"></a></p>
 <h1 id='dottedversionvector-library' class='heading'>DottedVersionVector Library</h1>
@@ -79,8 +79,6 @@
 <a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf">Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores</a> by 
 Gonçalves R, Almeida PS, Moreno CB, Fonte V, Preguiça N. (2012). 
 This code used the <a href="https://github.com/ricardobcl/Dotted-Version-Vectors">reference implementation in Erlang</a> for guidance (and test cases).</p>
-
-<p>Additional background information: <a href="https://en.wikipedia.org/wiki/Version_vector">https://en.wikipedia.org/wiki/Version_vector</a></p>
 <h1 id='implementation-details' class='heading'>Implementation Details</h1>
 
 <p>The basic class is <code><a href="Structs/DVV.html">DVV</a></code> which contains a version vector and a <code><a href="Structs/Dot.html">Dot</a></code> which is just a named counter. The version vection itself is
@@ -93,6 +91,13 @@ server or replica key is the same. This Swift implementation does not do this &n
 
 <p>Just like the Erlang implementation, a DVV is immutable. The DVV API will generate a new DVV instance instead of changing a value
 in-place.</p>
+<h1 id='links-for-more' class='heading'>Links for More</h1>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Version_vector">version vectors</a> &ndash; additional background information and variations</li>
+<li><a href="https://bradhowes.github.io/DottedVersionVector/index.html">code documentation</a> &ndash; documentation from code comments, courtesy of <a href="https://github.com/realm/jazzy">Jazzy</a>.</li>
+<li><a href="https://github.com/bradhowes/DottedVersionVector">code repo</a> &ndash; convenience link if reading the code documentation</li>
+</ul>
 
           </section>
         </section>
