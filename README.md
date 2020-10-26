@@ -2,7 +2,7 @@
 [![Swift 5.3](https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat)](https://swift.org)
 [![SPM](https://img.shields.io/badge/SPM-orange.svg?style=flat)](https://swift.org/package-manager/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Documentation](https://img.shields.io/badge/Doc-green.svg)](https://bradhowes.github.io/DottedVersionVector/index.html)
+[![Documentation](https://img.shields.io/badge/Documentation-green.svg)](https://bradhowes.github.io/DottedVersionVector/index.html)
 
 
 # DottedVersionVector Library
