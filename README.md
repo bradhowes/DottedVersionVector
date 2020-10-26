@@ -1,4 +1,5 @@
 [![Actions Status](https://github.com/bradhowes/DottedVersionVector/workflows/Swift/badge.svg)](https://github.com/bradhowes/DottedVersionVector/actions)
+[![Swift 5.3](https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat)](https://swift.org)
 
 # DottedVersionVector Library
 
