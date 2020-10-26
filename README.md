@@ -1,9 +1,9 @@
 # DottedVersionVector Library
 
 This is a Swift implementation of the _dotted version vector_ as described in the paper
-[http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf](Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores) by 
+[Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores](http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf) by 
 Gonçalves R, Almeida PS, Moreno CB, Fonte V, Preguiça N. (2012). 
-This code used the [https://github.com/ricardobcl/Dotted-Version-Vectors](reference implementation in Erlang) for guidance (and test cases).
+This code used the [reference implementation in Erlang](https://github.com/ricardobcl/Dotted-Version-Vectors) for guidance (and test cases).
 
 Additional background information: https://en.wikipedia.org/wiki/Version_vector
 
