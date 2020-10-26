@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/bradhowes/DottedVersionVector/workflows/Swift/badge.svg)](https://github.com/bradhowes/DottedVersionVector/actions)
+
 # DottedVersionVector Library
 
 This is a Swift implementation of the _dotted version vector_ as described in the paper
