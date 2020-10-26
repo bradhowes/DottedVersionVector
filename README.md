@@ -12,8 +12,6 @@ This is a Swift implementation of the _dotted version vector_ as described in th
 Gonçalves R, Almeida PS, Moreno CB, Fonte V, Preguiça N. (2012). 
 This code used the [reference implementation in Erlang](https://github.com/ricardobcl/Dotted-Version-Vectors) for guidance (and test cases).
 
-Additional background information: https://en.wikipedia.org/wiki/Version_vector
-
 # Implementation Details
 
 The basic class is `DVV` which contains a version vector and a `Dot` which is just a named counter. The version vection itself is
@@ -27,4 +25,8 @@ server or replica key is the same. This Swift implementation does not do this --
 Just like the Erlang implementation, a DVV is immutable. The DVV API will generate a new DVV instance instead of changing a value
 in-place.
 
-Additional formatted code documentation - [here](https://bradhowes.github.io/DottedVersionVector/index.html).
+# Links for More
+
+* [version vectors](https://en.wikipedia.org/wiki/Version_vector) -- additional background information and variations
+* [code documentation](https://bradhowes.github.io/DottedVersionVector/index.html) -- documentation from code comments, courtesy of [Jazzy](https://github.com/realm/jazzy).
+* [code repo](https://github.com/bradhowes/DottedVersionVector) -- convenience link if reading the code documentation
