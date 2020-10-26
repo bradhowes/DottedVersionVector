@@ -26,3 +26,5 @@ server or replica key is the same. This Swift implementation does not do this --
 
 Just like the Erlang implementation, a DVV is immutable. The DVV API will generate a new DVV instance instead of changing a value
 in-place.
+
+Additional formatted code documentation - [here](https://bradhowes.github.io/DottedVersionVector/index.html).
