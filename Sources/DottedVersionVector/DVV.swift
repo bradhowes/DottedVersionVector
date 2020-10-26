@@ -56,7 +56,7 @@ extension DVV {
     }
 }
 
-// MARK: - internal implementation methods
+// MARK: - Internal Implementation Methods
 
 extension DVV {
 
