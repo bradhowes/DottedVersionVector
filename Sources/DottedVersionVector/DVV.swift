@@ -4,11 +4,18 @@ import Foundation
  A _dotted_ version vector. The `dot` represents a server-side counter that is incremented at every write/store/put action.
  */
 public struct DVV: Equatable {
+
+    /// The collection of counters that define the version history for key
     internal let vv: DotVector
+
+    /// The server/replica counter
     internal let dot: Dot?
 
     /**
      Construct new instance with the given (default) values.
+
+     - parameter vv: the version vector to initialize with (default is empty array)
+     - parameter dot: the server counter to use (default is nil)
      */
     init(vv: DotVector = [], dot: Dot? = nil) {
         self.vv = vv

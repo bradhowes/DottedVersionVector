@@ -8,7 +8,11 @@ import Foundation
  specific server.
  */
 public struct Dot: Equatable {
+
+    /// The key associated with the counter.
     public let key: String
+
+    /// The counter value. Active counters start at 1 (zero is used to indicate a non-existant counter)
     public let counter: UInt64
 
     /**

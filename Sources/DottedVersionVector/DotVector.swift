@@ -47,7 +47,7 @@ extension DotVector {
     }
 
     /**
-     Locate the counter for the given key, returning nil if not found
+     Locate the counter for the given key, returning 0 if not found
 
      - parameter key: the key to look for
      - returns: the counter value if found or nil
