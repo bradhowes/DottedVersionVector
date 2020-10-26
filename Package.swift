@@ -14,7 +14,9 @@ let package = Package(
     targets: [
         .target(
             name: "DottedVersionVector",
-            dependencies: []),
+            dependencies: [],
+            exclude: ["README.md"]
+            ),
         .testTarget(
             name: "DottedVersionVectorTests",
             dependencies: ["DottedVersionVector"]),
