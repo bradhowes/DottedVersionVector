@@ -23,13 +23,6 @@ public struct Dot: Equatable {
     func increment() -> Dot { Dot(key: self.key, counter: self.counter + 1) }
 }
 
-extension Dot: Comparable {
-
-    public static func < (lhs: Dot, rhs: Dot) -> Bool {
-        lhs.key < rhs.key || (lhs.key == rhs.key && lhs.counter < rhs.counter)
-    }
-}
-
 extension Dot: CustomStringConvertible {
 
     public var description: String { "•\(key):\(counter)" }

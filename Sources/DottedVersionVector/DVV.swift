@@ -38,6 +38,25 @@ extension DVV {
     public func increment(key: String) -> DVV { Self.update(client: self, server: self, key: key) }
 
     /**
+     Merge the existing dot into the version vector and acquire a new Dot.
+
+     - parameter dot: the Dot to use in the new DVV
+     - returns: new DVV instance
+     */
+    public func merge(dot: Dot) -> DVV { DVV(vv: mergeDot(), dot: dot) }
+
+    /**
+     Obtain the counter for a given key. Looks first in the `dot` and then in the version vector.
+
+     - parameter key: the key to fetch
+     - returns: the counter value
+     */
+    public func counter(of key: String) -> UInt64 {
+        if let dot = dot, key == dot.key { return dot.counter }
+        return vv.counter(of: key)
+    }
+
+    /**
      Determine if this DVV descends from another. Note that this is true when `rhs` is nil.
 
      - parameter rhs: the DVV to check against
@@ -75,17 +94,6 @@ extension DVV {
     internal func mergeDot() -> DotVector {
         guard let dot = dot else { return self.vv }
         return vv.merge([dot])
-    }
-
-    /**
-     Obtain the counter for a given key. Looks first in the `dot` and then in the version vector.
-
-     - parameter key: the key to fetch
-     - returns: the counter value
-     */
-    internal func counter(of key: String) -> UInt64 {
-        if let dot = dot, key == dot.key { return dot.counter }
-        return vv.counter(of: key)
     }
 
     /**

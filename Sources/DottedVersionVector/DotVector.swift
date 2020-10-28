@@ -29,6 +29,17 @@ extension DotVector {
 extension DotVector {
 
     /**
+     Locate the counter for the given key, returning 0 if not found
+
+     - parameter key: the key to look for
+     - returns: the counter value if found or nil
+     */
+    internal func counter(of key: String) -> UInt64 {
+        let index = search(key)
+        return (index < count && self[index].key == key) ? self[index].counter : 0
+    }
+
+    /**
      Create new instance holding a version vector with the counter for the given key incremented by one.
 
      - parameter key: the key of the counter to increment
@@ -44,17 +55,6 @@ extension DotVector {
      */
     internal func descends(_ other: Self) -> Bool {
         other.first { self.counter(of: $0.key) < $0.counter } == nil
-    }
-
-    /**
-     Locate the counter for the given key, returning 0 if not found
-
-     - parameter key: the key to look for
-     - returns: the counter value if found or nil
-     */
-    internal func counter(of key: String) -> UInt64 {
-        let index = search(key)
-        return (index < count && self[index].key == key) ? self[index].counter : 0
     }
 
     /**
