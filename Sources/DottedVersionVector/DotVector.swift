@@ -66,8 +66,8 @@ extension DotVector {
     internal func dot(of key: String) -> Dot { Dot(key: key, counter: counter(of: key) + 1) }
 
     /**
-     Merge two Dot collections. Resulting collection of Dot entities will be ordered by their `id` value and counters will be the
-     max value found in both collections.
+     Merge two Dot collections. Resulting collection of Dot entities will be ordered by their `id` value and counters
+     will be the max value found in both collections.
 
      - parameter other: the collection to merge with
      - returns: new collection of Dot instances
@@ -78,17 +78,17 @@ extension DotVector {
 extension DotVector {
 
     private struct DotIterator {
-        private let seq: [Dot]
+        private let sequence: [Dot]
         private var index = 0
 
-        var hasHalue: Bool { index < seq.count }
-        var value: Dot { seq[index] }
+        var hasValue: Bool { index < sequence.count }
+        var value: Dot { sequence[index] }
 
-        init(seq: [Dot]) { self.seq = seq }
+        init(sequence: [Dot]) { self.sequence = sequence }
 
         mutating func fetchAndIterate() -> Dot {
             next()
-            return seq[index - 1]
+            return sequence[index - 1]
         }
 
         mutating func next() { index += 1 }
@@ -99,12 +99,12 @@ extension DotVector {
         private var v2: DotIterator
 
         init(_ v1: [Dot], _ v2: [Dot]) {
-            self.v1 = DotIterator(seq: v1)
-            self.v2 = DotIterator(seq: v2)
+            self.v1 = DotIterator(sequence: v1)
+            self.v2 = DotIterator(sequence: v2)
         }
 
         mutating func next() -> Dot? {
-            while v1.hasHalue && v2.hasHalue {
+            while v1.hasValue && v2.hasValue {
                 let dot1 = v1.value
                 let dot2 = v2.value
 
@@ -123,8 +123,8 @@ extension DotVector {
                 return Dot(key: dot1.key, counter: Swift.max(dot1.counter, dot2.counter))
             }
 
-            while v1.hasHalue { return v1.fetchAndIterate() }
-            while v2.hasHalue { return v2.fetchAndIterate() }
+            while v1.hasValue { return v1.fetchAndIterate() }
+            while v2.hasValue { return v2.fetchAndIterate() }
 
             return nil
         }

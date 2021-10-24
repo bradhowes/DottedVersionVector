@@ -1,7 +1,8 @@
 import Foundation
 
 /**
- A _dotted_ version vector. The `dot` represents a server-side counter that is incremented at every write/store/put action.
+ A _dotted_ version vector. The `dot` represents a server-side counter that is incremented at every write/store/put
+ action.
  */
 public struct DVV: Equatable {
 
@@ -24,7 +25,9 @@ public struct DVV: Equatable {
 }
 
 extension DVV: CustomStringConvertible {
-    public var description: String { "<[\(vv.map{$0.description}.joined(separator: ","))] \(dot?.description ?? "nil")>" }
+    public var description: String {
+      "<[\(vv.map{$0.description}.joined(separator: ","))] \(dot?.description ?? "nil")>"
+    }
 }
 
 extension DVV {
