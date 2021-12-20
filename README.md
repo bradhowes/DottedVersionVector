@@ -3,8 +3,6 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbradhowes%2FDottedVersionVector%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/bradhowes/DottedVersionVector)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbradhowes%2FDottedVersionVector%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/bradhowes/DottedVersionVector)
 [![License: MIT](https://img.shields.io/badge/License-MIT-A31F34.svg)](https://opensource.org/licenses/MIT)
-[![Documentation](https://img.shields.io/badge/Documentation-green.svg)](https://bradhowes.github.io/DottedVersionVector/index.html)
-
 
 # DottedVersionVector Library
 
