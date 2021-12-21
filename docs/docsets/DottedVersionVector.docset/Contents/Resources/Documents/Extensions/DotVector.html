@@ -18,18 +18,18 @@
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">DottedVersionVector 1.0.0 Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/bradhowes/DottedVersionVector"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p class="header-right"><a href="https://github.com/bradhowes/DottedVersionVector"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">DottedVersionVector Reference</a>
-        <img id="carat" src="../img/carat.png" />
+        <img id="carat" src="../img/carat.png" alt=""/>
         DotVector Extension Reference
       </p>
     </div>
@@ -127,6 +127,56 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>the index in the vector where the counter key should be to stay ordered</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sa19DottedVersionVectorAA3DotVRszlE7counter2ofs6UInt64VSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/counter(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sa19DottedVersionVectorAA3DotVRszlE7counter2ofs6UInt64VSS_tF">counter(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Locate the counter for the given key, returning 0 if not found</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="kd">func</span> <span class="nf">counter</span><span class="p">(</span><span class="n">of</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the key to look for</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the counter value if found or nil</p>
                       </div>
                     </section>
                   </div>
@@ -234,56 +284,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sa19DottedVersionVectorAA3DotVRszlE7counter2ofs6UInt64VSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/counter(of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sa19DottedVersionVectorAA3DotVRszlE7counter2ofs6UInt64VSS_tF">counter(of:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Locate the counter for the given key, returning 0 if not found</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="kd">func</span> <span class="nf">counter</span><span class="p">(</span><span class="n">of</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>key</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the key to look for</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>the counter value if found or nil</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:Sa19DottedVersionVectorAA3DotVRszlE3dot2ofACSS_tF"></a>
                     <a name="//apple_ref/swift/Method/dot(of:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:Sa19DottedVersionVectorAA3DotVRszlE3dot2ofACSS_tF">dot(of:<wbr>)</a>
@@ -344,8 +344,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Merge two Dot collections. Resulting collection of Dot entities will be ordered by their <code>id</code> value and counters will be the
-max value found in both collections.</p>
+                        <p>Merge two Dot collections. Resulting collection of Dot entities will be ordered by their <code>id</code> value and counters
+will be the max value found in both collections.</p>
 
                       </div>
                       <div class="declaration">
@@ -387,11 +387,10 @@ max value found in both collections.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://linkedin.com/in/bradhowes" target="_blank" rel="external">Brad Howes</a>. All rights reserved. (Last updated: 2020-10-26)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://linkedin.com/in/bradhowes" target="_blank" rel="external noopener">Brad Howes</a>. All rights reserved. (Last updated: 2021-12-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

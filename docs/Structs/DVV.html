@@ -18,18 +18,18 @@
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">DottedVersionVector 1.0.0 Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/bradhowes/DottedVersionVector"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p class="header-right"><a href="https://github.com/bradhowes/DottedVersionVector"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">DottedVersionVector Reference</a>
-        <img id="carat" src="../img/carat.png" />
+        <img id="carat" src="../img/carat.png" alt=""/>
         DVV Structure Reference
       </p>
     </div>
@@ -77,7 +77,8 @@
 
                 </div>
               </div>
-            <p>A <em>dotted</em> version vector. The <code>dot</code> represents a server-side counter that is incremented at every write/store/put action.</p>
+            <p>A <em>dotted</em> version vector. The <code>dot</code> represents a server-side counter that is incremented at every write/store/put
+action.</p>
 
           </section>
           <section class="section task-group-section">
@@ -274,6 +275,106 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:19DottedVersionVector3DVVV5merge3dotAcA3DotV_tF"></a>
+                    <a name="//apple_ref/swift/Method/merge(dot:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19DottedVersionVector3DVVV5merge3dotAcA3DotV_tF">merge(dot:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Merge the existing dot into the version vector and acquire a new Dot.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="nv">dot</span><span class="p">:</span> <span class="kt"><a href="../Structs/Dot.html">Dot</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">DVV</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dot</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the Dot to use in the new DVV</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>new DVV instance</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19DottedVersionVector3DVVV7counter2ofs6UInt64VSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/counter(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19DottedVersionVector3DVVV7counter2ofs6UInt64VSS_tF">counter(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Obtain the counter for a given key. Looks first in the <code><a href="../Structs/DVV.html#/s:19DottedVersionVector3DVVV3dotAA3DotVSgvp">dot</a></code> and then in the version vector.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">counter</span><span class="p">(</span><span class="n">of</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the key to fetch</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the counter value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:19DottedVersionVector3DVVV8descendsySbACSgF"></a>
                     <a name="//apple_ref/swift/Method/descends(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:19DottedVersionVector3DVVV8descendsySbACSgF">descends(_:<wbr>)</a>
@@ -380,7 +481,7 @@ equal. Note that this is true when <code>rhs</code> is nil.</p>
                 <a name="//apple_ref/swift/Section/Internal Implementation Methods" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Internal%20Implementation%20Methods"></a>
-                  <h3 class="section-name"><p>Internal Implementation Methods</p>
+                  <h3 class="section-name"><span>Internal Implementation Methods</span>
 </h3>
                 </div>
               </div>
@@ -412,56 +513,6 @@ equal. Note that this is true when <code>rhs</code> is nil.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>new DotVector</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19DottedVersionVector3DVVV7counter2ofs6UInt64VSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/counter(of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19DottedVersionVector3DVVV7counter2ofs6UInt64VSS_tF">counter(of:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Obtain the counter for a given key. Looks first in the <code><a href="../Structs/DVV.html#/s:19DottedVersionVector3DVVV3dotAA3DotVSgvp">dot</a></code> and then in the version vector.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="kd">func</span> <span class="nf">counter</span><span class="p">(</span><span class="n">of</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>key</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the key to fetch</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>the counter value</p>
                       </div>
                     </section>
                   </div>
@@ -524,7 +575,7 @@ equal. Note that this is true when <code>rhs</code> is nil.</p>
                 <a name="//apple_ref/swift/Section/DVV transformations and reductions" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/DVV%20transformations%20and%20reductions"></a>
-                  <h3 class="section-name"><p>DVV transformations and reductions</p>
+                  <h3 class="section-name"><span>DVV transformations and reductions</span>
 </h3>
                 </div>
               </div>
@@ -795,11 +846,10 @@ together cover both sets while discarding obsolete knowledge.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://linkedin.com/in/bradhowes" target="_blank" rel="external">Brad Howes</a>. All rights reserved. (Last updated: 2020-10-26)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://linkedin.com/in/bradhowes" target="_blank" rel="external noopener">Brad Howes</a>. All rights reserved. (Last updated: 2021-12-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>
